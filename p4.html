@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td>Username</td>
+				<td><input type="text" id="t"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" id="t1"></td>
+			</tr>
+			<tr>
+				<td><input type="button" onclick="verify()" value="Login"/></td>
+				<td><input type="reset" name="t4"></td>
+			</tr>
+		</table>
+	</form>
+		<script type="text/javascript">
+			
+				var ck_usn=/^[1][A-ZA-Z0-90-9A-ZA-Z0-90-90-9]{9}$/;
+				var ck_pass=/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8}$/;
+				function verify() {
+					var Username=document.getElementById('t').value;
+					var Password=document.getElementById('t1').value;
+					if(ck_usn.test(Username) && ck_pass.test(Password))
+					{
+						var d=new Date();
+						document.write(d);
+						document.body.bgColor="Green";
+						document.body.fgColor="Blue";
+						alert("Welcome to RVce");
+					}
+					else
+					{
+						alert("INcorrect USN?Pwd")
+					}
+				
+			}
+		</script>
+
+
+
+
+</body>
+</html>

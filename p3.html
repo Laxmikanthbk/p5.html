@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Json Table</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function createtable() {
+			var student=[
+						{
+							"id":"1rv",
+							"name":"abc"
+						},
+						{
+						"id":"1rv",
+						"name":"abc"
+						}
+						]
+
+			var tablebody='<table border=2><tr><th>Id</th><th>Name</th></tr>'
+			student.forEach(function(d)
+				{tablebody += '<tr><td>'+d.id+'</td><td>'+d.name+'</td></tr>'});
+			tablebody+='<table>';
+
+			var divContainer=document.getElementById("show");
+			divContainer.innerHTML=tablebody;
+		}
+
+	</script>
+<button type="button" value="Click Here" onclick="createtable()">Click Here</button>
+<p id="show"></p>
+</body>
+</html>
